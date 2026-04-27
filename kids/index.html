@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Size Guide — Labyrinth BJJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg-card: #151515;
+      --bg-row-even: #1a1a1a;
+      --bg-row-odd: #141414;
+      --bg-header: #1c1810;
+      --gold: #C8963E;
+      --gold-light: #d4a94f;
+      --gold-dim: rgba(200, 150, 62, 0.15);
+      --white: #ffffff;
+      --text-body: #b0b0b0;
+      --text-muted: #787878;
+      --border: rgba(255,255,255,0.06);
+      --border-gold: rgba(200, 150, 62, 0.25);
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Subtle background pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 50% 0%, rgba(200, 150, 62, 0.04) 0%, transparent 100%),
+        radial-gradient(ellipse 400px 300px at 80% 50%, rgba(200, 150, 62, 0.02) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .brand-name {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* Decorative line */
+    .brand-name::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 16px;
+    }
+
+    .page-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .tolerance-note {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.8125rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 6px 16px;
+      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+      background: var(--gold-dim);
+    }
+
+    /* Section styling */
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-header::before {
+      content: '';
+      width: 4px;
+      height: 28px;
+      background: var(--gold);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-subtitle {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Table wrapper for horizontal scroll on mobile */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-card);
+    }
+
+    .table-wrap::-webkit-scrollbar {
+      height: 6px;
+    }
+    .table-wrap::-webkit-scrollbar-track {
+      background: var(--bg-card);
+    }
+    .table-wrap::-webkit-scrollbar-thumb {
+      background: rgba(200, 150, 62, 0.3);
+      border-radius: 3px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+    }
+
+    .measurements-table table {
+      min-width: 780px;
+    }
+
+    th {
+      background: var(--bg-header);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--border-gold);
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+    }
+
+    .measurements-table th {
+      text-align: center;
+    }
+
+    .measurements-table th:first-child {
+      text-align: left;
+    }
+
+    td {
+      padding: 12px 16px;
+      font-size: 0.9375rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-body);
+    }
+
+    .measurements-table td {
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .measurements-table td:first-child {
+      text-align: left;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* Alternating rows */
+    tbody tr:nth-child(even) {
+      background: var(--bg-row-even);
+    }
+    tbody tr:nth-child(odd) {
+      background: var(--bg-row-odd);
+    }
+
+    /* Row hover */
+    tbody tr {
+      transition: background 0.15s ease;
+    }
+    tbody tr:hover {
+      background: rgba(200, 150, 62, 0.06);
+    }
+
+    /* Size column */
+    .size-cell {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      letter-spacing: 0.02em;
+    }
+
+    .notes-cell {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .notes-cell.highlight {
+      color: var(--gold-light);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* Sub-headers in measurements table */
+    .sub-header td {
+      background: rgba(200, 150, 62, 0.08) !important;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .sub-header:hover {
+      background: rgba(200, 150, 62, 0.08) !important;
+    }
+
+    /* Decorative separator */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+    }
+
+    .divider-diamond {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* Tolerance note inline */
+    .inline-note {
+      font-size: 0.8125rem;
+      color: var(--gold-light);
+      margin-top: 12px;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .footer-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container {
+        padding: 32px 16px 60px;
+      }
+
+      .header {
+        margin-bottom: 40px;
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      td, th {
+        padding: 10px 12px;
+      }
+
+      td {
+        font-size: 0.875rem;
+      }
+    }
+  
+  /* Nav Bar */
+  .size-nav { 
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,15,15,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,150,62,0.15);
+    padding: 12px 24px; display: flex; align-items: center; justify-content: center; gap: 8px;
+    flex-wrap: wrap;
+  }
+  .size-nav a {
+    color: #999; text-decoration: none; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 14px;
+    border-radius: 6px; transition: all 0.2s ease; white-space: nowrap;
+    font-family: "Inter", sans-serif;
+  }
+  .size-nav a:hover { color: #C8963E; background: rgba(200,150,62,0.08); }
+  .size-nav a.active { color: #C8963E; background: rgba(200,150,62,0.12); font-weight: 600; }
+  .size-nav .sep { color: rgba(255,255,255,0.15); font-size: 14px; user-select: none; }
+
+</style>
+</head>
+<body>
+<nav class="size-nav"><a href="../index.html">← All Charts</a><span class="sep">|</span><a href="../mens/index.html">Mens</a><span class="sep">|</span><a href="../kids/index.html" class="active">Kids</a><span class="sep">|</span><a href="../female/index.html">Female</a></nav>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <p class="brand-name">Labyrinth BJJ</p>
+      <h1 class="page-title">Kids Size Guide</h1>
+      <p class="tolerance-note">*There is a 2cm tolerance in all areas</p>
+    </header>
+
+    <!-- Section 1: Size Guide -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Size Guide</h2>
+          <p class="section-subtitle">Find the right size based on height and age</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Height (ft)</th>
+              <th>Height (cm)</th>
+              <th>Age</th>
+              <th>Size &amp; Fit Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="size-cell">M0000</td>
+              <td>3'3"–3'6"</td>
+              <td>99cm–106cm</td>
+              <td>5–6</td>
+              <td class="notes-cell">Only available in certain ranges</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M000</td>
+              <td>3'6"–3'8"</td>
+              <td>106cm–113cm</td>
+              <td>6–7</td>
+              <td class="notes-cell">Only available in certain ranges</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M00</td>
+              <td>3'8"–3'11"</td>
+              <td>113cm–120cm</td>
+              <td>7–8</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M0</td>
+              <td>3'11"–4'2"</td>
+              <td>120cm–127cm</td>
+              <td>8–9</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M1</td>
+              <td>4'2"–4'4"</td>
+              <td>127cm–134cm</td>
+              <td>9–10</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M2</td>
+              <td>4'4"–4'7"</td>
+              <td>134cm–141cm</td>
+              <td>10–11</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M3</td>
+              <td>4'7"–4'10"</td>
+              <td>141cm–148cm</td>
+              <td>11–12</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">M4</td>
+              <td>4'10"–5'1"</td>
+              <td>148cm–155cm</td>
+              <td>12–13</td>
+              <td class="notes-cell">—</td>
+            </tr>
+            <tr>
+              <td class="size-cell">A0</td>
+              <td>5'4"–5'7"</td>
+              <td>162cm–168cm</td>
+              <td>14+</td>
+              <td class="notes-cell highlight">Purchase Gi's in our Mens or Ladies collections</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider">
+      <span class="divider-diamond"></span>
+    </div>
+
+    <!-- Section 2: Gi Measurements -->
+    <section class="section measurements-table">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Gi Measurements — How Will My Gi Fit?</h2>
+          <p class="section-subtitle">All measurements in centimeters (cm)</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Measurement</th>
+              <th>M0000</th>
+              <th>M000</th>
+              <th>M00</th>
+              <th>M0</th>
+              <th>M1</th>
+              <th>M2</th>
+              <th>M3</th>
+              <th>M4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Jacket sub-header -->
+            <tr class="sub-header">
+              <td colspan="9">Jacket Sizes</td>
+            </tr>
+            <tr>
+              <td>Wingspan</td>
+              <td>108</td>
+              <td>114</td>
+              <td>120</td>
+              <td>126</td>
+              <td>132</td>
+              <td>138</td>
+              <td>144</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>Jacket Length</td>
+              <td>48</td>
+              <td>53</td>
+              <td>50</td>
+              <td>59</td>
+              <td>62</td>
+              <td>65</td>
+              <td>68</td>
+              <td>71</td>
+            </tr>
+            <tr>
+              <td>Chest</td>
+              <td>40</td>
+              <td>42</td>
+              <td>44</td>
+              <td>46</td>
+              <td>48</td>
+              <td>50</td>
+              <td>52</td>
+              <td>54</td>
+            </tr>
+            <!-- Pant sub-header -->
+            <tr class="sub-header">
+              <td colspan="9">Pant Sizes</td>
+            </tr>
+            <tr>
+              <td>Waist</td>
+              <td>33</td>
+              <td>36</td>
+              <td>39</td>
+              <td>41</td>
+              <td>43</td>
+              <td>46</td>
+              <td>48</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Hips</td>
+              <td>37</td>
+              <td>40</td>
+              <td>43</td>
+              <td>45</td>
+              <td>47</td>
+              <td>50</td>
+              <td>52</td>
+              <td>54</td>
+            </tr>
+            <tr>
+              <td>Length Back</td>
+              <td>64</td>
+              <td>68</td>
+              <td>72</td>
+              <td>74</td>
+              <td>76</td>
+              <td>80</td>
+              <td>84</td>
+              <td>87</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="inline-note">*There is a 2cm tolerance in all areas</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-brand">Labyrinth BJJ</p>
+      <p class="footer-text">Kids Gi Size Chart &middot; 2026</p>
+    </footer>
+
+  </div>
+
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
