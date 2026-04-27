@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinth BJJ — Gi Size Charts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --gold: #C8963E;
+            --gold-light: #d4a854;
+            --bg-dark: #0f0f0f;
+            --bg-card: #161616;
+            --bg-card-hover: #1c1c1c;
+            --text-white: #ffffff;
+            --text-gray: #999999;
+            --text-light: #b0b0b0;
+            --border: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .brand {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+
+        .kanji {
+            font-size: 24px;
+            color: var(--gold);
+            opacity: 0.4;
+            margin-bottom: 48px;
+            letter-spacing: 0.2em;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px 28px;
+            text-decoration: none;
+            color: var(--text-white);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(200, 150, 62, 0.1);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(200, 150, 62, 0.1);
+        }
+
+        .card-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card .sizes {
+            font-size: 12px;
+            color: var(--text-light);
+            background: rgba(255,255,255,0.04);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .card .arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 18px;
+        }
+
+        .card:hover .arrow {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: var(--text-gray);
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 600px) {
+            .cards { grid-template-columns: 1fr; }
+            body { padding: 30px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">Labyrinth BJJ</div>
+        <h1>GI SIZE CHARTS</h1>
+        <div class="subtitle">Find your perfect fit across all our collections</div>
+        <div class="kanji">迷 宮</div>
+
+        <div class="cards">
+            <a href="mens/index.html" class="card">
+                <span class="arrow">→</span>
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6 2 10c0 2 1 4 3 5.5V22l3-2 3 2V15.5C13 17 16 15 16 10c0-4-1.5-8-4-8z" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+                </div>
+                <h2>Men's Gi Fit Guide</h2>
+                <p>16 sizes from A0 to A6, including Long, Short, Heavy, Fitted, and Extra Long variants.</p>
+                <div class="sizes">A0 · A0L · A1 · A1F · A1L · A2 · A2S · A2H · A2L · A2XL · A3 · A3S · A3L · A4 · A5 · A6</div>
+            </a>
+
+            <a href="kids/index.html" class="card">
+                <span class="arrow">→</span>
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2.5"/><path d="M15 9H9l-3 13h2l2-8 2 8h2l2-8 2 8h2L15 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h2>Kids Size Guide</h2>
+                <p>8 sizes for ages 5-13, from M0000 to M4. Height and age-based sizing.</p>
+                <div class="sizes">M0000 · M000 · M00 · M0 · M1 · M2 · M3 · M4</div>
+            </a>
+
+            <a href="female/index.html" class="card">
+                <span class="arrow">→</span>
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+                </div>
+                <h2>Female Size Guide</h2>
+                <p>10 sizes from F1 to F4L, including Long and Curvy variants for the best fit.</p>
+                <div class="sizes">F1 · F1L · F2 · F2C · F2L · F3 · F3C · F3L · F4 · F4L</div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>LABYRINTH BJJ — Gi Size Charts · 2026</p>
+    </footer>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
