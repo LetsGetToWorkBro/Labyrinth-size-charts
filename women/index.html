@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labyrinth BJJ — Female Size Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0f0f0f;
+    --bg-alt-1: #141414;
+    --bg-alt-2: #1a1a1a;
+    --bg-card: #161616;
+    --gold: #C8963E;
+    --gold-light: #d4a94f;
+    --gold-dim: rgba(200,150,62,0.15);
+    --white: #ffffff;
+    --gray: #b0b0b0;
+    --gray-dim: #777777;
+    --border: rgba(255,255,255,0.06);
+    --border-gold: rgba(200,150,62,0.25);
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-top: 24px;
+  }
+
+  .brand {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .page-title {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px auto 0;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .section-note {
+    font-size: 13px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  /* Table Container */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-alt-1);
+    margin-bottom: 56px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+  }
+
+  .measurements-table {
+    min-width: 900px;
+  }
+
+  thead th {
+    background: linear-gradient(180deg, rgba(200,150,62,0.18) 0%, rgba(200,150,62,0.06) 100%);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-gold);
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  thead th:first-child {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  tbody td {
+    font-size: 14px;
+    padding: 12px 16px;
+    text-align: center;
+    color: var(--gray);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+
+  .size-guide-table tbody td:last-child {
+    text-align: left;
+    font-size: 13px;
+    color: var(--gray-dim);
+    white-space: normal;
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  tbody tr:nth-child(odd) { background: var(--bg-alt-1); }
+  tbody tr:nth-child(even) { background: var(--bg-alt-2); }
+
+  tbody tr:hover {
+    background: rgba(200,150,62,0.06);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Sub-header rows in measurements table */
+  .sub-header td {
+    background: rgba(200,150,62,0.10) !important;
+    color: var(--gold) !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    padding: 10px 16px !important;
+    border-bottom: 1px solid var(--border-gold) !important;
+  }
+
+  /* Illustrations Section */
+  .illustrations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 56px;
+    margin-top: 16px;
+  }
+
+  .illustration-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 24px 24px;
+    text-align: center;
+  }
+
+  .illustration-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .illustration-card svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Alternative option highlight */
+  .alt-row td {
+    border-top: 1px solid var(--border-gold);
+    color: var(--gray-dim) !important;
+    font-style: italic;
+  }
+  .alt-row td:first-child {
+    color: var(--gold) !important;
+    font-style: normal;
+  }
+  .alt-row td:last-child {
+    color: var(--gold-light) !important;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    color: var(--gray-dim);
+    font-size: 13px;
+  }
+
+  .footer .brand-footer {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .container { padding: 24px 12px 60px; }
+    .illustrations { grid-template-columns: 1fr; gap: 20px; }
+    .illustration-card { padding: 24px 16px 20px; }
+    .header { margin-bottom: 36px; }
+  }
+
+  /* Scrollbar styling for table */
+  .table-wrap::-webkit-scrollbar { height: 6px; }
+  .table-wrap::-webkit-scrollbar-track { background: var(--bg-alt-1); }
+  .table-wrap::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+  .table-wrap::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+  /* Nav Bar */
+  .size-nav { 
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,15,15,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,150,62,0.15);
+    padding: 12px 24px; display: flex; align-items: center; justify-content: center; gap: 8px;
+    flex-wrap: wrap;
+  }
+  .size-nav a {
+    color: #999; text-decoration: none; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 14px;
+    border-radius: 6px; transition: all 0.2s ease; white-space: nowrap;
+    font-family: "Inter", sans-serif;
+  }
+  .size-nav a:hover { color: #C8963E; background: rgba(200,150,62,0.08); }
+  .size-nav a.active { color: #C8963E; background: rgba(200,150,62,0.12); font-weight: 600; }
+  .size-nav .sep { color: rgba(255,255,255,0.15); font-size: 14px; user-select: none; }
+
+</style>
+</head>
+<body>
+<nav class="size-nav"><a href="../index.html">← All Charts</a><span class="sep">|</span><a href="../mens/index.html">Mens</a><span class="sep">|</span><a href="../kids/index.html">Kids</a><span class="sep">|</span><a href="../female/index.html" class="active">Female</a></nav>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="brand">Labyrinth BJJ</div>
+    <h1 class="page-title">Female Size Guide</h1>
+    <div class="divider"></div>
+  </header>
+
+  <!-- Section 1: Size Guide -->
+  <section>
+    <h2 class="section-title">Size Guide</h2>
+    <p class="section-subtitle">Find your recommended size based on weight and height.</p>
+
+    <div class="table-wrap">
+      <table class="size-guide-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Weight (lb)</th>
+            <th>Weight (kg)</th>
+            <th>Height (ft)</th>
+            <th>Height (cm)</th>
+            <th>Size &amp; Fit Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>F1</td>
+            <td>90–110 lb</td>
+            <td>40–50 kg</td>
+            <td>5′0″–5′2″</td>
+            <td>152–158 cm</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>F1L</td>
+            <td>90–110 lb</td>
+            <td>40–50 kg</td>
+            <td>5′1″–5′3″</td>
+            <td>155–160 cm</td>
+            <td>Pants 4cm longer than F1, wingspan 7cm longer</td>
+          </tr>
+          <tr>
+            <td>F2</td>
+            <td>110–125 lb</td>
+            <td>50–57 kg</td>
+            <td>5′2″–5′5″</td>
+            <td>158–165 cm</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>F2C</td>
+            <td>120–135 lb</td>
+            <td>54–61 kg</td>
+            <td>5′2″–5′5″</td>
+            <td>158–165 cm</td>
+            <td>Chest 5cm wider, side vents 1cm longer, hips 4cm wider</td>
+          </tr>
+          <tr>
+            <td>F2L</td>
+            <td>110–125 lb</td>
+            <td>50–57 kg</td>
+            <td>5′3″–5′6″</td>
+            <td>160–168 cm</td>
+            <td>Pants 4cm longer than F2, wingspan 7cm longer</td>
+          </tr>
+          <tr>
+            <td>F3</td>
+            <td>125–145 lb</td>
+            <td>57–65 kg</td>
+            <td>5′3″–5′6″</td>
+            <td>160–168 cm</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>F3C</td>
+            <td>135–150 lb</td>
+            <td>61–68 kg</td>
+            <td>5′3″–5′6″</td>
+            <td>160–168 cm</td>
+            <td>Chest 5cm wider, side vents 1cm longer, hips 4cm wider</td>
+          </tr>
+          <tr>
+            <td>F3L</td>
+            <td>125–145 lb</td>
+            <td>57–65 kg</td>
+            <td>5′5″–5′7″</td>
+            <td>165–170 cm</td>
+            <td>Pants 4cm longer than F3, wingspan 7cm longer</td>
+          </tr>
+          <tr>
+            <td>F4</td>
+            <td>145–165 lb</td>
+            <td>65–75 kg</td>
+            <td>5′6″–5′8″</td>
+            <td>168–172 cm</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>F4L</td>
+            <td>145–165 lb</td>
+            <td>65–75 kg</td>
+            <td>5′7″–5′9″</td>
+            <td>170–175 cm</td>
+            <td>Pants 4cm longer than F4, wingspan 7cm longer</td>
+          </tr>
+          <tr class="alt-row">
+            <td>A0</td>
+            <td>132–155 lb</td>
+            <td>60–70 kg</td>
+            <td>5′4″–5′6″</td>
+            <td>162–168 cm</td>
+            <td>Alternative Option</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Illustrations -->
+  <section>
+    <div class="illustrations">
+
+      <!-- Jacket Illustration -->
+      <div class="illustration-card">
+        <h3>Jacket Measurements</h3>
+        <svg viewBox="0 0 300 340" width="280" height="320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Jacket body -->
+          <path d="
+            M 105 40
+            L 90 45
+            Q 55 55, 42 85
+            L 30 130
+            L 45 135
+            L 55 100
+            L 58 175
+            Q 58 185, 60 195
+            L 60 270
+            L 110 270
+            L 110 200
+            L 130 270
+            L 170 270
+            L 190 200
+            L 190 270
+            L 240 270
+            L 240 195
+            Q 242 185, 242 175
+            L 245 100
+            L 255 135
+            L 270 130
+            L 258 85
+            Q 245 55, 210 45
+            L 195 40
+            Q 175 32, 150 30
+            Q 125 32, 105 40
+            Z
+          " stroke="#C8963E" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+
+          <!-- Collar / lapel V -->
+          <path d="M 125 42 L 150 120 L 175 42" stroke="#C8963E" stroke-width="1.2" fill="none"/>
+
+          <!-- Belt/tie -->
+          <line x1="80" y1="195" x2="220" y2="195" stroke="#C8963E" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <!-- WINGSPAN arrow (horizontal across top) -->
+          <line x1="30" y1="130" x2="270" y2="130" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <!-- Arrow heads -->
+          <polygon points="30,130 38,126 38,134" fill="#ffffff" opacity="0.8"/>
+          <polygon points="270,130 262,126 262,134" fill="#ffffff" opacity="0.8"/>
+          <text x="150" y="124" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">WINGSPAN</text>
+
+          <!-- CHEST arrow (horizontal across chest) -->
+          <line x1="68" y1="160" x2="232" y2="160" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <polygon points="68,160 76,156 76,164" fill="#ffffff" opacity="0.8"/>
+          <polygon points="232,160 224,156 224,164" fill="#ffffff" opacity="0.8"/>
+          <text x="150" y="154" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">CHEST</text>
+
+          <!-- LENGTH arrow (vertical, right side) -->
+          <line x1="252" y1="45" x2="252" y2="270" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <polygon points="252,45 248,53 256,53" fill="#ffffff" opacity="0.8"/>
+          <polygon points="252,270 248,262 256,262" fill="#ffffff" opacity="0.8"/>
+          <text x="268" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" transform="rotate(90, 268, 160)">LENGTH</text>
+        </svg>
+      </div>
+
+      <!-- Pants Illustration -->
+      <div class="illustration-card">
+        <h3>Pant Measurements</h3>
+        <svg viewBox="0 0 300 380" width="280" height="360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Pants outline -->
+          <path d="
+            M 90 40
+            L 90 42
+            Q 88 48, 88 55
+            L 88 60
+            L 88 160
+            Q 88 170, 90 175
+            L 95 200
+            L 95 330
+            L 132 330
+            L 140 200
+            L 148 170
+            L 152 170
+            L 160 200
+            L 168 330
+            L 205 330
+            L 205 200
+            Q 210 175, 212 170
+            L 212 160
+            L 212 60
+            L 212 55
+            Q 212 48, 210 42
+            L 210 40
+            Z
+          " stroke="#C8963E" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+
+          <!-- Waistband line -->
+          <line x1="90" y1="55" x2="210" y2="55" stroke="#C8963E" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <!-- Drawstring detail -->
+          <path d="M 140 48 Q 150 58, 160 48" stroke="#C8963E" stroke-width="1" fill="none"/>
+
+          <!-- Crotch seam hint -->
+          <line x1="150" y1="170" x2="150" y2="100" stroke="#C8963E" stroke-width="0.8" opacity="0.4"/>
+
+          <!-- WAIST arrow -->
+          <line x1="90" y1="47" x2="210" y2="47" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <polygon points="90,47 98,43 98,51" fill="#ffffff" opacity="0.8"/>
+          <polygon points="210,47 202,43 202,51" fill="#ffffff" opacity="0.8"/>
+          <text x="150" y="39" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">WAIST</text>
+
+          <!-- HIPS arrow -->
+          <line x1="85" y1="100" x2="215" y2="100" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <polygon points="85,100 93,96 93,104" fill="#ffffff" opacity="0.8"/>
+          <polygon points="215,100 207,96 207,104" fill="#ffffff" opacity="0.8"/>
+          <text x="150" y="94" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">HIPS</text>
+
+          <!-- LENGTH BACK arrow (vertical, right side) -->
+          <line x1="228" y1="40" x2="228" y2="330" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+          <polygon points="228,40 224,48 232,48" fill="#ffffff" opacity="0.8"/>
+          <polygon points="228,330 224,322 232,322" fill="#ffffff" opacity="0.8"/>
+          <text x="248" y="185" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" transform="rotate(90, 248, 185)">LENGTH BACK</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Gi Measurements -->
+  <section>
+    <h2 class="section-title">Gi Measurements — How Will It Fit?</h2>
+    <p class="section-note">*There is a 2cm tolerance in all areas</p>
+    <p class="section-subtitle">All measurements are in centimetres (cm).</p>
+
+    <div class="table-wrap">
+      <table class="measurements-table">
+        <thead>
+          <tr>
+            <th>Measurement</th>
+            <th>F1</th>
+            <th>F1L</th>
+            <th>F2</th>
+            <th>F2L</th>
+            <th>F2C</th>
+            <th>F3</th>
+            <th>F3L</th>
+            <th>F3C</th>
+            <th>F4</th>
+            <th>F4L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Jacket sub-header -->
+          <tr class="sub-header">
+            <td colspan="11">Jacket Sizes</td>
+          </tr>
+          <tr>
+            <td>Wingspan</td>
+            <td>137</td>
+            <td>145</td>
+            <td>145</td>
+            <td>153</td>
+            <td>145</td>
+            <td>153</td>
+            <td>161</td>
+            <td>153</td>
+            <td>161</td>
+            <td>169</td>
+          </tr>
+          <tr>
+            <td>Jacket Length</td>
+            <td>65</td>
+            <td>68</td>
+            <td>68</td>
+            <td>72</td>
+            <td>68</td>
+            <td>72</td>
+            <td>76</td>
+            <td>72</td>
+            <td>76</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>Chest</td>
+            <td>45</td>
+            <td>45</td>
+            <td>47</td>
+            <td>47</td>
+            <td>52</td>
+            <td>51</td>
+            <td>51</td>
+            <td>55</td>
+            <td>54</td>
+            <td>54</td>
+          </tr>
+
+          <!-- Pant sub-header -->
+          <tr class="sub-header">
+            <td colspan="11">Pant Sizes</td>
+          </tr>
+          <tr>
+            <td>Waist</td>
+            <td>46</td>
+            <td>46</td>
+            <td>48</td>
+            <td>48</td>
+            <td>51</td>
+            <td>50</td>
+            <td>50</td>
+            <td>53</td>
+            <td>52</td>
+            <td>52</td>
+          </tr>
+          <tr>
+            <td>Hips</td>
+            <td>50</td>
+            <td>50</td>
+            <td>52</td>
+            <td>52</td>
+            <td>55</td>
+            <td>54</td>
+            <td>54</td>
+            <td>57</td>
+            <td>55</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>Length Back</td>
+            <td>87</td>
+            <td>91</td>
+            <td>91</td>
+            <td>95</td>
+            <td>91</td>
+            <td>95</td>
+            <td>99</td>
+            <td>95</td>
+            <td>99</td>
+            <td>103</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="brand-footer">LABYRINTH BJJ</div>
+    <p>© 2026 Labyrinth BJJ. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
